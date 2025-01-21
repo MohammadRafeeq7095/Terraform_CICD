@@ -24,3 +24,7 @@ pipeline {
         }
     }
 }
+
+
+
+#you also give parameters like action for apply and destroy in code you have to give ${action} ex: sh 'terraform ${action} -auto-approve'
