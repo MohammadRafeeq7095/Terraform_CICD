@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+        
         stage('git checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/MohammadRafeeq7095/Terraform_CICD.git'
@@ -17,11 +18,7 @@ pipeline {
                 sh 'terraform plan'
             }
         }
-        stage('terraform apply') {
-            steps {
-                sh 'terraform apply -auto-approve'
-            }
-        }
+
     }
 }
 
